@@ -1,1 +1,65 @@
 @import "tailwindcss";
+
+/* Define your custom properties */
+@theme {
+    --font-family-michroma: var(--font-michroma), sans-serif;
+    --font-family-geist-sans: var(--font-geist-sans), sans-serif;
+    --font-family-geist-mono: var(--font-geist-mono), monospace;
+    --font-family-poppins: var(--font-poppins), sans-serif;
+    --font-family-montserrat: var(--font-montserrat), sans-serif;
+    --color-primary: #a3bbfb;
+    --color-secondary: #1f2937;
+    --color-primary-text: #a3bbfb;
+    --color-secondary-text: #1f2937;
+}
+
+/* Font family utilities */
+@utility font-michroma {
+    font-family: var(--font-michroma), sans-serif;
+}
+
+@utility font-poppins {
+    font-family: var(--font-poppins), sans-serif;
+}
+
+@utility font-montserrat {
+    font-family: var(--font-montserrat), sans-serif;
+}
+
+
+
+.link-underline {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.link-underline::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 0%;
+    height: 2px;
+    background-color: currentColor;
+    transition: width 0.3s ease-in-out;
+}
+
+.link-underline:hover::after {
+    left: 0;
+    right: auto;
+    width: 100%;
+}
+
+
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+    /* Safari and Chrome */
+}

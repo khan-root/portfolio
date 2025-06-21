@@ -1,8 +1,14 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Michroma, Poppins, Montserrat} from "next/font/google";
 import "./globals.css";
 import Navabr from "@/components/Navabr";
 
+const michroma = Michroma({
+  weight: "400",
+  variable: "--font-michroma",
+  subsets: ["latin"],
+  display: 'swap',
+});
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -12,6 +18,19 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
+const montserrat = Montserrat({
+  variable: "--font-montserrat",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+});
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -27,13 +46,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased h-screen w-screen border border-black`}
+        className={` ${michroma.variable} ${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${montserrat.variable}  antialiased h-screen w-screen font-michroma`}
       >
-        <div className="h-full w-full flex gap-5">
-          <div className="border border-red-500">
-            <Navabr />
-          </div>
-          <main>{children}</main>
+        <div className="h-full w-full flex flex-col md:flex-row bg-primary text-secondary-text">
+          <Navabr />
+          <main className="h-screen w-full">{children}</main>
         </div>
 
       </body>

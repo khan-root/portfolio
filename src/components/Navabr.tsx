@@ -23,10 +23,19 @@ const Navbar = () => {
 
   // Capitalize the label
   const capitalizedLabel = label.charAt(0).toUpperCase() + label.slice(1);
+  const pathName = pathSegments[0]
+
 
   return (
-    <div>
-      <Link href={href}>{capitalizedLabel}</Link>
+    <div className={`pt-10 ${pathName === undefined ? 
+      "bg-primary text-secondary-text" : "bg-secondary text-primary-text"}` 
+    } >
+
+      <Link href={href} className='px-5 '>
+        <span className='rotate-0 md:-rotate-90 link-underline'>
+          {capitalizedLabel}
+        </span>
+      </Link>
     </div>
   );
 };
