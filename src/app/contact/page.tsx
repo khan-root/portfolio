@@ -18,9 +18,9 @@ const ContactPage = () => {
         <div className="flex flex-col gap-5 text-center md:text-left py-8 md:py-0">
           <span className="text-6xl font-semibold font-michroma">Contact</span>
           <span className="">Looking for help with a website or web application? I&apos;d love to hear about your project — don&apos;t hesitate to reach out.</span>
-          <div className='flex flex-col gap-2'>
+          <div className='flex flex-col gap-2 md:py-0 justify-center items-center md:items-start'>
             {contactInfo.map((item) => (
-              <div key={item.id} className='flex items-center gap-2'>
+              <div key={item.id} className='flex items-center gap-2 flex-col md:flex-row'>
                 <span>{item.icon}</span>
                 <Link href={item.link} target='_blank'>{item.value}</Link>
               </div>
