@@ -27,7 +27,7 @@ const Navbar = () => {
 
 
   return (
-    <div className={`pt-10 ${pathName === undefined ? 
+    <div className={`h-ful pt-10 ${pathName === undefined ? 
       "bg-primary text-secondary-text" : "bg-secondary text-primary-text"}` 
     } >
 

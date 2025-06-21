@@ -17,8 +17,8 @@ export default function RootLayout({
 
   return (
 
-        <div className="h-full w-full flex gap-5 font-michroma bg-secondary text-primary-text">
-          <main className="h-screen w-full">{children}</main>
+        <div className="min-h-full w-full flex gap-5 font-michroma bg-secondary text-primary-text">
+          {children}
         </div>
   );
 }

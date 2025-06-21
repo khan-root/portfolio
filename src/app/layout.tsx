@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Michroma, Poppins, Montserrat} from "next/font/google";
 import "./globals.css";
 import Navabr from "@/components/Navabr";
-import Footer from "@/components/Footer";
 
 const michroma = Michroma({
   weight: "400",
@@ -47,16 +46,15 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={` ${michroma.variable} ${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${montserrat.variable}  antialiased h-screen w-screen font-michroma`}
+        className={` ${michroma.variable} ${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${montserrat.variable} h-screen w-screen   antialiased font-michroma`}
       >
-        <div className="h-full w-full flex flex-col md:flex-row bg-primary text-secondary-text relative">
-          <Navabr />
-          <main className="h-screen w-full">
+        <div className="h-full w-full flex flex-col md:flex-row bg-primary text-secondary-text">
+     
+            <Navabr />
+
+          <main className="h-full w-full">
             {children}
           </main>
-          <div className="absolute bottom-0 w-full">
-            <Footer />
-          </div>
         </div>
 
       </body>
