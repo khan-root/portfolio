@@ -39,6 +39,48 @@ export const projectData: ProjectData[] = [
         bgColor: "#a3bbfb",
         textColor: "#1f2937",
         techStack: ["React", "Tailwind CSS ", "Node & Express"],
+    },
+    {
+        id: 3,
+        title: "Accelerate",
+        description: "A web application for managing accelerator and their details.",
+        slug: "accelerate",
+        image: [
+            "/images/accelerate/1.png",
+            "/images/accelerate/2.png",
+            "/images/accelerate/3.png",
+        ],
+        bgColor: "#a3bbfb", 
+        textColor: "#1f2937",
+        techStack: ["React", "Tailwind CSS", "Node & Express"],
+    },
+    {
+        id: 4,
+        title: "Spext",
+        description: "A web application for managing spextra and their details.",
+        slug: "spext",
+        image: [
+            "/images/spext/1.png",
+            "/images/spext/2.png",
+            "/images/spext/3.png",
+        ],
+        bgColor: "#a3bbfb",
+        textColor: "#1f2937",
+        techStack: ["React", "Tailwind CSS", "Node & Express"],
+    },
+    {
+        id: 5,
+        title: "Order Pulse",
+        description: "A web application for managing order pulse and their details.",
+        slug: "order-pulse",
+        image: [
+            "/images/order-pulse/1.png",
+            "/images/order-pulse/2.png",
+            "/images/order-pulse/3.png",
+        ],
+        bgColor: "#a3bbfb", 
+        textColor: "#1f2937",
+        techStack: ["React", "Tailwind CSS", "Node & Express"],
     }
-]
+    ]
 
